@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Loading from './Loading';
-import Search from './Search';
+import { Navigate } from 'react-router-dom';
+import { saveUser } from '../services/user';
+import Loading from '../components/Loading';
 
 function Login() {
   const [loading, setLoading] = useState(false);
@@ -17,8 +18,6 @@ function Login() {
     }
   }, [name])
 
-  const saveUser = (user) => localStorage.setItem('tunesUser', JSON.stringify(user));
-  
   const inputHandler = ({ target: { value } }) => {
     setName(value);
   };
@@ -32,7 +31,7 @@ function Login() {
 
   if (loading) return <Loading />;
 
-  if (redirect) return <Search /> 
+  if (redirect) return <Navigate to="/search" />
 
   return (
     <div className='login-container'>
