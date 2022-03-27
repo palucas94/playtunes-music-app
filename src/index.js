@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './styles/Header.css';
 import './styles/Login.css';
+import './styles/Header.css';
+import './styles/Search.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
