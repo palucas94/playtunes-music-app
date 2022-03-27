@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Albums from '../components/Albums';
 import Header from '../components/Header';
-import tunesAPI from '../services/tunesAPI';
+import { tunesAPI } from '../services/tunesAPI';
 
 function Search() {
   const [artist, setArtist] = useState('');
@@ -15,7 +15,6 @@ function Search() {
   const buttonHandler = async () => {
     setLoading(true);
     const results = await tunesAPI(artist);
-    console.log(results);
     setAlbums(results);
     setLoading(false);
   };
