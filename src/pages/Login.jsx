@@ -24,7 +24,7 @@ function Login() {
 
   const submitHandler = () => {
     setLoading(true);
-    saveUser(name);
+    saveUser({ name, email: '', img: ''});
     setRedirect(true);
     setLoading(false);
   };

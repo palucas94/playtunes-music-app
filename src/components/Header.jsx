@@ -5,7 +5,7 @@ import { readUser } from '../services/user';
 function Header() {
   return (
     <div className="header-container">
-      <h2>Welcome, { readUser() }!</h2>
+      <h2>Welcome, { readUser().name }!</h2>
       <nav>
         <Link to="/search">Search</Link>
         <Link to="/favorites">Favorites</Link>
