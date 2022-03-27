@@ -1,4 +1,4 @@
-const tunesAPI = async (artist) => {
+export const tunesAPI = async (artist) => {
   const ENCODED = encodeURI(artist).replaceAll('%20', '+');
   const ALBUMS_URL = `https://itunes.apple.com/search?entity=album&term=${ENCODED}&attribute=allArtistTerm`
 
@@ -28,6 +28,10 @@ const tunesAPI = async (artist) => {
     }),
   );
   return RESPONSE;
-}
+};
 
-export default tunesAPI;
+export const songsAPI = async (id) => {
+  const REQUEST = await fetch(`https://itunes.apple.com/lookup?id=${id}&entity=song`);
+  const REQ_JSON= await REQUEST.json();
+  return REQ_JSON.results;
+};
