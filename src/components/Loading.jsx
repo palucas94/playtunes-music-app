@@ -2,8 +2,8 @@ import React from 'react';
 
 function Loading() {
   return (
-    <div>
-      Loading...
+    <div className="loading-container">
+      <div className="lds-hourglass"></div>
     </div>
   );
 }

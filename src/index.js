@@ -4,6 +4,7 @@ import './index.css';
 import './styles/Login.css';
 import './styles/Header.css';
 import './styles/Search.css';
+import './styles/Loading.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
