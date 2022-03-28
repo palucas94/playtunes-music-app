@@ -36,7 +36,10 @@ function Login() {
   return (
     <div className='login-container'>
       <h1 className='login-title'>PlayTunes</h1>
-      <form className='login-form'>
+      <form
+        className='login-form'
+        onSubmit={ submitHandler }
+      >
         <input
           type='text'
           value={ name }
@@ -46,10 +49,9 @@ function Login() {
         />
         <p className='login-constraint'>Name must have at least 3 characters</p>
         <button
-          type='button'
+          type='submit'
           className='login-button'
           disabled={ disabled }
-          onClick={ submitHandler }
         >
           ENTER
         </button>
