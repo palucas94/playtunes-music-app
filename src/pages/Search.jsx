@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Albums from '../components/Albums';
 import ArtistNotFound from '../components/ArtistNotFound';
+import Form from '../components/Form';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { tunesAPI } from '../services/tunesAPI';
@@ -29,22 +30,6 @@ function Search() {
     return (
       <div>
         <Header />
-        <form className="search-form">
-          <input
-            placeholder='Search for artist...'
-            type="text"
-            className="search-input"
-            value={ artist }
-            onChange={ inputHandler }
-          />
-          <button
-            type='button'
-            className="search-button"
-            onClick={ buttonHandler }
-          >
-            Search
-          </button>
-        </form>
         <Loading />
       </div>
     );
@@ -53,22 +38,11 @@ function Search() {
   return (
     <div className="search-container">
       <Header />
-      <form className="search-form">
-        <input
-          placeholder='Search for artist...'
-          type="text"
-          className="search-input"
-          value={ artist }
-          onChange={ inputHandler }
-        />
-        <button
-          type='button'
-          className="search-button"
-          onClick={ buttonHandler }
-        >
-          Search
-        </button>
-      </form>
+      <Form
+        artist={ artist }
+        inputHandler={ inputHandler }
+        buttonHandler={ buttonHandler }
+      />
       { searched && !albums.length && <ArtistNotFound artist={ currentArtist }/> }
       { albums.length > 0 && <Albums collection={ albums } artist={ currentArtist }  />}
     </div>
