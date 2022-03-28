@@ -21,15 +21,15 @@
   min-width: 33%;
   padding: 2rem 4rem;
   border-radius: 1rem;
-  box-shadow: -4px 7px 89px 5px rgba(0,0,0,0.71);
-  -webkit-box-shadow: -4px 7px 89px 5px rgba(0,0,0,0.71);
-  -moz-box-shadow: -4px 7px 89px 5px rgba(0,0,0,0.71);
+  box-shadow: -0.1rem 0.6rem 1rem 0.5rem rgba(0,0,0,0.71);
+  -webkit-box-shadow: -0.1rem 0.6rem 1rem 0.5rem rgba(0,0,0,0.71);
+  -moz-box-shadow: -0.1rem 0.6rem 1rem 0.5rem rgba(0,0,0,0.71);
 }
 
 .login-constraint {
   font-style: italic;
   font-size: 0.7rem;
-  opacity: 1;
+  opacity: 0.7;
   padding-bottom: 0.7rem;
 }
 
