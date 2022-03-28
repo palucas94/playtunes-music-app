@@ -7,7 +7,7 @@ function Albums({ collection, artist }) {
       <h3>Albums result for artist { artist }:</h3>
       <div className="albums-wrapper">
         { collection.map((a) => (
-          <div className="album">
+          <div className="album" key={ Math.random() * 10000 }>
             <Link to={ `/album/${a.collectionId}` } >
               <img
                 className='album-img'
