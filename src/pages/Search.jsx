@@ -66,11 +66,7 @@ function Search() {
           Search
         </button>
       </form>
-      <div className="albums-container">
-        <div className="albums-wrapper">
-          { albums.length > 0 && <Albums collection={ albums } artist={ currentArtist }  />}
-        </div>
-      </div>
+      { albums.length > 0 && <Albums collection={ albums } artist={ currentArtist }  />}
     </div>
   );
 }

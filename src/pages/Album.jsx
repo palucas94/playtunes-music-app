@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
+import Loading from '../components/Loading';
 import Song from '../components/Song';
 import { songsAPI } from '../services/tunesAPI';
 
@@ -29,16 +30,16 @@ function Album() {
   return (
     <div className="album-page">
       < Header />
-      { loading && <h1>Loading</h1> }
+      { loading && <Loading />}
       {
-        albumName && artist &&
+        albumData && albumName && artist &&
         <div className="album-container">
-          <div className="album-wrapper">
-            <img src={ albumImg } alt={ albumName } />
-            <h3>{ artist }</h3>
-            <h4>{ albumName }</h4>
-            { <Song album={ albumData } />}
+          <div className="cover-wrapper">
+            <img className='cover-img' src={ albumImg } alt={ albumName } />
+            <h3 className='cover-album-name'>{ albumName }</h3>
+            <h5 className='cover-artist-name'>{ artist }</h5>
           </div>
+          { <Song album={ albumData } />}
         </div>
       }
     </div>

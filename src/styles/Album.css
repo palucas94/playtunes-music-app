@@ -1,0 +1,49 @@
+.album-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding-top: 5rem;
+}
+
+.cover-wrapper {
+  width: 20rem;
+}
+
+.cover-img {
+  width: 100%;
+}
+
+.cover-album-name,
+.cover-artist-name {
+  padding: 0.25rem;
+}
+
+.song-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  border-radius: 1rem 2rem 2rem 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.track-name {
+  flex-grow: 1;
+  font-size: 0.85rem;
+  padding: 1rem;
+}
+
+@media only screen and (max-device-width: 1028px) {
+  .album-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 5rem;
+  }
+}
