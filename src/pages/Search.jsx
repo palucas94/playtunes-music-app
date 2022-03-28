@@ -23,6 +23,7 @@ function Search() {
     setCurrentArtist(artist);
     setAlbums(results);
     setLoading(false);
+    setArtist('');
     albums.length === 0 && setSearched(true);
   };
 
