@@ -1,6 +1,6 @@
 export const tunesAPI = async (artist) => {
   const ENCODED = encodeURI(artist).replaceAll('%20', '+');
-  const ALBUMS_URL = `https://itunes.apple.com/search?entity=album&term=${ENCODED}&attribute=allArtistTerm`
+  const ALBUMS_URL = `https://stormy-wildwood-12924.herokuapp.com/https://itunes.apple.com/search?entity=album&term=${ENCODED}&attribute=allArtistTerm`
 
   const API_RESPONSE = await fetch(ALBUMS_URL);
 
@@ -31,7 +31,7 @@ export const tunesAPI = async (artist) => {
 };
 
 export const songsAPI = async (id) => {
-  const REQUEST = await fetch(`https://itunes.apple.com/lookup?id=${id}&entity=song`);
+  const REQUEST = await fetch(`https://stormy-wildwood-12924.herokuapp.com/https://itunes.apple.com/lookup?id=${id}&entity=song`);
   const REQ_JSON= await REQUEST.json();
   return REQ_JSON.results;
 };
