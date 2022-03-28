@@ -40,7 +40,7 @@ function Login() {
         <input
           type='text'
           value={ name }
-          placeholder='Enter you name'
+          placeholder='Enter your name'
           className='login-input'
           onChange={ inputHandler }
         />
