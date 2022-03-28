@@ -40,7 +40,7 @@ function Login() {
         <input
           type='text'
           value={ name }
-          placeholder='Name'
+          placeholder='Enter you name'
           className='login-input'
           onChange={ inputHandler }
         />
@@ -51,7 +51,7 @@ function Login() {
           disabled={ disabled }
           onClick={ submitHandler }
         >
-          LET'S GO!
+          ENTER
         </button>
       </form>
     </div>
