@@ -1,3 +1,5 @@
+import USER_IMG from '../icons/user-icon.svg';
+
 const USER ='tunesUser'
 
 const saveUser = (user) => localStorage.setItem(USER, JSON.stringify(user));
@@ -7,7 +9,7 @@ export const createUser = (user) => {
   const emptyUser = {
     name: '',
     email: '',
-    img: '',
+    img: `${ USER_IMG }`,
   };
   saveUser({ ...emptyUser, ...user });
 }

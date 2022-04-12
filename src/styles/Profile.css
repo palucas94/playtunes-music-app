@@ -19,6 +19,11 @@
   align-items: center;
 }
 
+.user-img {
+  height: 4rem;
+  width: 4rem;
+}
+
 .name-wrapper,
 .email-wrapper,
 .img-wrapper {
