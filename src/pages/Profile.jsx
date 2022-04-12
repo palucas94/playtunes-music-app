@@ -11,11 +11,15 @@ function Profile() {
       <Header />
       <div className="user-container">
         <img src={ img } alt="User" className="user-img" />
+        <div className="name-wrapper">
+          <h3 className="user-title">Name:</h3>
+          <h4 className="user-info">{ name }</h4>
+        </div>
+        <div className="email-wrapper">
+          <h3 className="user-title">E-mail:</h3>
+          <h4 className="user-info">{ email }</h4>
+        </div>
         <Link to='/profile/edit'>Edit profile</Link>
-        <h3>Name</h3>
-        <h4>{ name }</h4>
-        <h3>E-mail</h3>
-        <h4>{ email }</h4>
       </div>
     </div>
   );

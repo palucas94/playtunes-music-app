@@ -35,36 +35,44 @@ function EditProfile() {
   return (
     <div className="edit-profile-container">
       <Header />
-      <form onSubmit={ submitHandler }>
-        <img src='' alt='User' />
-        <input
-          name='img'
-          value={ newImg }
-          onChange={ inputHandler }
-          placeholder='Insert a link'
-          type="text"
-          className="img-input"
-        />
-        <h3>Name</h3>
-        <input
-          name='userName'
-          value={ newName }
-          onChange={ inputHandler }
-          placeholder='Your name here'
-          type="text"
-          className="name-input"
-        />
-        <h3>Email</h3>
-        <input
-          name='email'
-          value={ newEmail }
-          onChange={ inputHandler }
-          placeholder='user@user.com'
-          type="text"
-          className="name-input"
-        />
-        <button type='submit'>Save</button>
-      </form>
+      <div className="user-container">
+        <form className="edit-profile-form" onSubmit={ submitHandler }>
+          <div className="img-wrapper">
+            <h3 className="user-title">Image</h3>
+            <input
+              name='img'
+              value={ newImg }
+              onChange={ inputHandler }
+              placeholder='Insert a link'
+              type="text"
+              className="edit-input"
+            />
+          </div>
+          <div className="name-wrapper">
+            <h3 className="user-title">Name</h3>
+            <input
+              name='userName'
+              value={ newName }
+              onChange={ inputHandler }
+              placeholder='Your name here'
+              type="text"
+              className="edit-input"
+              />
+          </div>
+          <div className="name-wrapper">
+            <h3 className="user-title">E-mail</h3>
+            <input
+              name='email'
+              value={ newEmail }
+              onChange={ inputHandler }
+              placeholder='user@user.com'
+              type="text"
+              className="edit-input"
+              />
+          </div>
+          <button type='submit' className="save-button">Save</button>
+        </form>
+      </div>
     </div>
   );
 }

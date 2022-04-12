@@ -6,6 +6,7 @@ import './styles/Header.css';
 import './styles/Search.css';
 import './styles/Album.css';
 import './styles/Albums.css';
+import './styles/Profile.css'
 import './styles/Loading.css';
 import './styles/ArtistNotFound.css';
 import App from './App';
