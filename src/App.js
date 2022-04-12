@@ -6,6 +6,7 @@ import Album from './pages/Album';
 import NotFound from './pages/NotFound';
 import Profile from './pages/Profile';
 import EditProfile from './pages/EditProfile';
+import FavoriteSongs from './pages/FavoriteSongs';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/album/:id' element={ < Album /> } />
         <Route path='/profile' element={ <Profile /> } />
         <Route path='/profile/edit' element={ <EditProfile /> } />
+        <Route path='/favorites' element={ <FavoriteSongs /> } />
         <Route path="*" element={ <NotFound /> } />
       </Routes>
     </BrowserRouter>

@@ -24,6 +24,7 @@
 }
 
 .song-wrapper {
+  width: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,6 +50,14 @@
 
 .isFavorite {
   color: rgb(0, 128, 0);
+}
+
+.favorite-songs-container{
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-device-width: 1028px) {
