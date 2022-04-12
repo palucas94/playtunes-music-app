@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import Header from '../components/Header';
-import { saveUser } from '../services/user';
+import { updateUser } from '../services/user';
 
 function EditProfile() {
   const [newName, setNewName] = useState('');
@@ -26,7 +26,7 @@ function EditProfile() {
   }
   
   const submitHandler = () => {
-    saveUser({ name: newName, email: newEmail, img: newImg });
+    updateUser({ name: newName, email: newEmail, img: newImg });
     setRedirect(true);
   };
 

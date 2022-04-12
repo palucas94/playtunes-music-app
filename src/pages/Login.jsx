@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
-import { saveUser } from '../services/user';
+import { createUser } from '../services/user';
 import Loading from '../components/Loading';
 
 function Login() {
@@ -24,7 +24,7 @@ function Login() {
 
   const submitHandler = () => {
     setLoading(true);
-    saveUser({ name, email: '', img: ''});
+    createUser({ name });
     setRedirect(true);
     setLoading(false);
   };
