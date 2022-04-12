@@ -30,3 +30,14 @@
   color: white;
   padding: 1rem;
 }
+
+@media only screen and (max-device-width: 600px) {
+  .playtunes-title {
+    width: 100vw;
+    text-align: center;
+  }
+
+  .welcome-user {
+    display: none;
+  }
+}

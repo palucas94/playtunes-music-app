@@ -6,8 +6,8 @@ function Header() {
   return (
     <div className="header-container">
       <div className="title-wrapper">
-        <h2>PlayTunes</h2>
-        <h2>Welcome, { readUser().name }!</h2>
+        <h2 className="playtunes-title">PlayTunes</h2>
+        <h2 className="welcome-user">Welcome, { readUser().name }!</h2>
       </div>
       <nav className='header-nav'>
         <Link to="/search" className='nav-item'>Search</Link>
