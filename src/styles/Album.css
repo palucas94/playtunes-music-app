@@ -71,6 +71,7 @@
     width: 100%;
   }
   .song-wrapper {
+    width: 90vw;
     flex-direction: column-reverse;
     border-radius: 2rem;
   }
