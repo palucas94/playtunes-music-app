@@ -1,5 +1,26 @@
+const encode = (artist) => {
+  const STRING = artist.toLowerCase().split('');
+  const NEW_STRING = [];
+  
+  STRING.map((s) => {
+    if (s === ' ') {
+      s = '+';
+    }
+    if (s === 'ç') {
+      s = 'c';
+    }
+    if (s === 'é' || s === 'è') {
+      s = 'e';
+    }
+    return NEW_STRING.push(s);
+  });
+
+  return NEW_STRING.join();
+}
+
 export const tunesAPI = async (artist) => {
-  const ENCODED = encodeURI(artist).replaceAll('%20', '+');
+  const ENCODED = encode(artist);
+
   const ALBUMS_URL = `https://stormy-wildwood-12924.herokuapp.com/https://itunes.apple.com/search?entity=album&term=${ENCODED}&attribute=allArtistTerm`
 
   const API_RESPONSE = await fetch(ALBUMS_URL);
